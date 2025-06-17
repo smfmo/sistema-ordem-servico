@@ -21,6 +21,7 @@
                     <th>Data de Abertura</th>
                     <th>Prioridade</th>
                     <th>Situação</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,6 +38,7 @@
                         echo "<td>" . htmlspecialchars(date('d/m/Y', strtotime($ordem['data_abertura']))) . "</td>";
                         echo "<td>" . ucfirst(htmlspecialchars($ordem['prioridade'])) . "</td>";
                         echo "<td>" . ucfirst(str_replace('_', ' ', htmlspecialchars($ordem['situacao']))) . "</td>";
+                        echo "<td><button class='btn btn-sm btn-warning'>Editar</button></td>";
                         echo "</tr>";
                     }
                 } catch (PDOException $e) {
