@@ -1,0 +1,12 @@
+-- ARQUIVO DESTINADO A CRIAÇÃO DA TABELA DE ORDEM E SERVIÇO DA APLICAÇÃO -- 
+
+Banco de dados utilizado: PostgreSQL/versão 17
+
+CREATE TABLE ordens_servico (
+    id SERIAL PRIMARY KEY,
+    nome_cliente VARCHAR(255) NOT NULL,
+    descricao_servico TEXT NOT NULL,
+    data_abertura DATE NOT NULL,
+    prioridade VARCHAR(30) NOT NULL,
+    situacao VARCHAR(30) NOT NULL
+);
